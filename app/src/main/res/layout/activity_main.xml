@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <Button
+        android:id="@+id/showlistyear"
+        android:layout_width="317dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="68dp"
+        android:text="Show list by year"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/deletemovie" />
+
+    <Button
+        android:id="@+id/showlistrating"
+        android:layout_width="317dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="172dp"
+        android:text="Show list by Rating"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/deletemovie" />
+
+    <Button
+        android:id="@+id/deletemovie"
+        android:layout_width="317dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="72dp"
+        android:text="Delete movie"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editmovie" />
+
+    <Button
+        android:id="@+id/addMovie"
+        android:layout_width="321dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="72dp"
+        android:text="Add movie"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.522"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/editmovie"
+        android:layout_width="317dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="76dp"
+        android:text="Edit movie"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.542"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/addMovie" />
+</androidx.constraintlayout.widget.ConstraintLayout>
