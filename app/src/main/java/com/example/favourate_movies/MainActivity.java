@@ -146,7 +146,7 @@ public class MainActivity extends AppCompatActivity {
         if(requestCode==REQ_EDIT){
             if(resultCode==RESULT_OK){
                 Movie movie=data.getExtras().getParcelable(EDIT_MOVIE_CODE);
-                Toast.makeText(this,"Intent successfull", Toast.LENGTH_SHORT).show();
+                Toast.makeText(this,"Movie Edited successfully", Toast.LENGTH_SHORT).show();
                 moviesAddedList.set(j,movie);
             }
         }
