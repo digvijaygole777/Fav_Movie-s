@@ -22,6 +22,8 @@ public class MainActivity extends AppCompatActivity {
     private int REQ_MOVIE_CODE=100,REQ_EDIT=50;
     static  String ADD_MOVIE_CODE="added";
     static  String EDIT_MOVIE_CODE="movieedit";
+    static  String SORT_YEAR_CODE="year";
+    static  String SORT_RATING_CODE="rating";
     ArrayList<Movie> moviesAddedList=new ArrayList<>();
     String[] moviesToedit;
     int j=0;
@@ -86,6 +88,8 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+
+
         editmovie.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -118,12 +122,41 @@ public class MainActivity extends AppCompatActivity {
                         });
 
                         builder.show();
-
-
-
                     }
             }
         });
+
+        showListByYear.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+               if(moviesAddedList.isEmpty()){
+                   Toast.makeText(MainActivity.this, "Please Add the movie", Toast.LENGTH_SHORT).show();
+               }else{
+                   Intent moviesByYearintent=new Intent(MainActivity.this,MoviesByYear.class);
+                    moviesByYearintent.putParcelableArrayListExtra(SORT_YEAR_CODE,moviesAddedList);
+
+                    startActivity(moviesByYearintent);
+
+               }
+
+            }
+        });
+
+        showListByRating.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+            if(moviesAddedList.isEmpty()){
+                Toast.makeText(MainActivity.this, "Please add the movies", Toast.LENGTH_SHORT).show();
+            }else{
+                Intent moviesByRatingIntent=new Intent(MainActivity.this,Sort_by_Rating.class);
+                moviesByRatingIntent.putParcelableArrayListExtra(SORT_RATING_CODE,moviesAddedList);
+                startActivity(moviesByRatingIntent);
+            }
+
+            }
+        });
+
 
     }
 

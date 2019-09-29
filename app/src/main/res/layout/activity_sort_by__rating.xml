@@ -12,7 +12,7 @@
         android:layout_width="195dp"
         android:layout_height="33dp"
         android:layout_marginTop="16dp"
-        android:text="Movies By Year"
+        android:text="Movies By Rating"
         android:textAlignment="center"
         android:textSize="24sp"
         app:layout_constraintEnd_toEndOf="parent"
